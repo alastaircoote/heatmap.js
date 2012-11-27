@@ -575,17 +575,10 @@
                     pointTemplate = me.get("pointTemplate"),
                     offset = pointTemplate.width / 2
 
-                ctx.shadowColor = ('rgba(0,0,0,'+((count)?(count/me.store.max):'0.1')+')');
-                ctx.shadowOffsetX = 1000;
-                ctx.shadowOffsetY = 1000;
-                ctx.shadowBlur = 15;
-                ctx.beginPath();
-                ctx.arc(x - 1000, y - 1000, radius, 0, Math.PI * 2, true);
-                ctx.closePath();
-                ctx.fill();
                 
-                /*ctx.globalAlpha = ((count)?(count/me.store.max):0.1)
-                ctx.drawImage(pointTemplate,x-offset,y-offset)*/
+                ctx.globalAlpha = ((count)?(count/me.store.max):0.1)
+                ctx.drawImage(pointTemplate,x-offset,y-offset)
+                
                 if(colorize){
                     // finally colorize the area
                     me.colorize(xb,yb);
